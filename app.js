@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
-var Bitcoin = require('bitcoinjs');
+var Bitcoin = require("bitcoinjs");
 
-var init = require('bitcoinjs/daemon/init');
-var config = init.getConfig();
+var cfg = new Bitcoin.Settings();
+cfg.network.noListen = true;
+cfg.network.connect = "localhost:8333";
+cfg.storage.uri = "mongodb://localhost/bitcoin";
 
-node = new Bitcoin.Node(config);
+var node = new Bitcoin.Node(cfg);
+
 node.start();

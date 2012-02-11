@@ -7,6 +7,9 @@ bitcoins.
 
 ## Install
 
-  git clone git://github.com/bitcoin-notify/bitcoin-notify.git
-  npm install bitcoinjs
+Run from a Linux or Unix shell:
 
+``` sh
+git clone git://github.com/bitcoin-notify/bitcoin-notify.git
+npm install bitcoinjs
+```
